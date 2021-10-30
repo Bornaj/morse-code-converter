@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="script.js"></script>
+    <style>
+        table, th, td {
+            border: 0.5px solid black;
+        }
+
+        #tablica {
+            margin-left: 3%;
+        }
+    </style>
+</head>
+
+<body>
+    <select id="convert_type">
+        <option value="input_morse" selected>Kodiranje</option>
+        <option value="output_morse">Dekodiranje</option>
+    </select>
+    <input type="text" id="input1" onkeypress="enter(event)" placeholder="Unesi poruku"></input>
+    <button id="convert" onclick="convert()">Konvertiraj</button>
+    <br>
+    <h5>konvertirana poruka:</h5>
+    <h4 id="output"></h4>
+    <br>
+    <div id = "tablica">
+        <button onclick="show_all()">Prikaži sve kodove</button>
+        <div id="show_all"></div>
+    </div>
+</body>
+
+</html>
