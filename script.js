@@ -18,6 +18,7 @@ function convert() {
         if (document.getElementById("convert_type").value === "input_morse") {
         //dekodiranje
             input = input.replace("_", "-")
+            input = input.replace("*", ".")
             var letter = input.split(" ")
             for (; i < letter.length; i++) {
                 for (; j < morse.length; j++) {
@@ -68,7 +69,7 @@ function show_all() {
     var div = document.getElementById("show_all")
     if (div.childElementCount == 0) {
         var table = document.createElement("table")
-        table.appendChild(new_row("th", "znak", "morsov kod"))
+        table.appendChild(new_row("th", "Znak", "Morseov kod"))
         for (var i = 0; i < slova.length; i++) {
             table.appendChild(new_row("td", slova[i], morse[i]))
         }
